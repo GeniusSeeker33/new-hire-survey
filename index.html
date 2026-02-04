@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orion Wholesale – New Team Member Introduction Survey</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 22px; line-height: 1.35; }
+    h1 { margin: 0 0 8px; }
+    h2 { margin: 14px 0 8px; }
+    h3 { margin: 12px 0 6px; }
+    .muted { color: #666; font-size: 0.95rem; margin-top: 6px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 14px; background: #fff; }
+    label { display: block; font-weight: 600; margin-top: 10px; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 6px; border: 1px solid #ccc; border-radius: 10px; }
+    textarea { min-height: 84px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .checklist { margin-top: 8px; border: 1px solid #eee; border-radius: 12px; padding: 10px; background: #fafafa; }
+    .check { display: flex; gap: 8px; align-items: center; margin: 6px 0; }
+    .check input { width: auto; margin: 0; }
+    .small { font-size: 0.9rem; }
+    .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    button { padding: 10px 12px; border: 1px solid #333; border-radius: 12px; background: #fff; cursor: pointer; }
+    pre { white-space: pre-wrap; word-break: break-word; background: #fafafa; padding: 12px; border-radius: 12px; border: 1px solid #eee; }
+    .divider { height: 1px; background: #eee; margin: 12px 0; }
+    ul { margin: 6px 0 0 18px; }
+    @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } .row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body>
+  <h1>ORION WHOLESALE – NEW TEAM MEMBER INTRODUCTION SURVEY</h1>
+  <div class="muted"><b>Complete before your start date.</b> Purpose: We want to get to know you as a person, not just a job title. Your responses will help us introduce you to the Orion family and celebrate your arrival. You’ll be able to review and approve what’s shared publicly.</div>
+
+  <div class="grid" style="margin-top:14px;">
+    <!-- LEFT: FORM -->
+    <div class="card">
+      <h2>Survey</h2>
+
+      <h3>SECTION 1: BASIC INFORMATION <span class="muted">(Internal + Public)</span></h3>
+
+      <label>1) Full Name (as you want it displayed)</label>
+      <input id="fullName" placeholder="e.g., Jordan Smith" />
+
+      <label>2) Preferred Name or Nickname</label>
+      <input id="preferredName" placeholder="e.g., Jordy (optional)" />
+
+      <div class="row">
+        <div>
+          <label>3) Job Title</label>
+          <input id="jobTitle" placeholder="e.g., Sales Executive" />
+        </div>
+        <div>
+          <label>4) Start Date</label>
+          <input id="startDate" placeholder="e.g., Feb 18, 2026" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>5) Location (City / State)</label>
+          <input id="location" placeholder="e.g., Louisville, KY" />
+        </div>
+        <div>
+          <label>6) LinkedIn Profile URL (optional but encouraged)</label>
+          <input id="linkedinUrl" placeholder="https://linkedin.com/in/..." />
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3>SECTION 2: YOUR STORY <span class="muted">(Internal + Public – edited for tone)</span></h3>
+
+      <label>7) In a few sentences, tell us about your background and what led you to Orion.</label>
+      <textarea id="background" placeholder="2–4 sentences works great."></textarea>
+
+      <label>8) What excites you most about joining Orion Wholesale?</label>
+      <textarea id="excited" placeholder="What are you looking forward to?"></textarea>
+
+      <div class="divider"></div>
+
+      <h3>SECTION 3: GET TO KNOW YOU <span class="muted">(Internal + Public – fun + human)</span></h3>
+
+      <label>9) Outside of work, how do you like to spend your time?</label>
+      <div class="checklist" id="hobbyList">
+        <div class="check"><input type="checkbox" value="Family time" /> <span>Family time</span></div>
+        <div class="check"><input type="checkbox" value="Hunting / shooting sports" /> <span>Hunting / shooting sports</span></div>
+        <div class="check"><input type="checkbox" value="Outdoor activities" /> <span>Outdoor activities</span></div>
+        <div class="check"><input type="checkbox" value="Fitness / sports" /> <span>Fitness / sports</span></div>
+        <div class="check"><input type="checkbox" value="Music" /> <span>Music</span></div>
+        <div class="check"><input type="checkbox" value="Travel" /> <span>Travel</span></div>
+        <div class="check"><input type="checkbox" value="Reading / learning" /> <span>Reading / learning</span></div>
+        <div class="check"><input type="checkbox" value="DIY / building" /> <span>DIY / building</span></div>
+        <label class="small" style="margin-top:10px;">Other (optional)</label>
+        <input id="hobbyOther" placeholder="Other: __________" />
+      </div>
+
+      <label>10) One fun or interesting fact about you that most people don’t know.</label>
+      <input id="funFact" placeholder="Fun fact..." />
+
+      <label>11) Favorite food or restaurant?</label>
+      <input id="favoriteFood" placeholder="e.g., tacos, sushi, local spot..." />
+
+      <div class="divider"></div>
+
+      <h3>SECTION 4: VALUES &amp; MOTIVATION <span class="muted">(Internal only – culture building)</span></h3>
+
+      <label>12) What motivates you to do your best work?</label>
+      <textarea id="motivation" placeholder="Short answer is perfect."></textarea>
+
+      <label>13) What does “success” look like to you in this role one year from now?</label>
+      <textarea id="success" placeholder="What would make you feel proud?"></textarea>
+
+      <label>14) Is there a personal or professional goal you’re currently working toward?</label>
+      <textarea id="goal" placeholder="Personal or professional is fine."></textarea>
+
+      <div class="divider"></div>
+
+      <h3>SECTION 5: OPTIONAL SOCIAL CONTENT <span class="muted">(Public – employee approval required)</span></h3>
+
+      <label>15) Do you give permission for Orion to share a short welcome post on LinkedIn using your responses?</label>
+      <select id="linkedinPermission">
+        <option value="Yes">Yes</option>
+        <option value="Review" selected>Yes, but please let me review before posting</option>
+        <option value="No">No (internal welcome only)</option>
+      </select>
+
+      <label>16) Photo (optional): paste a link to a photo you’re comfortable with Orion using</label>
+      <input id="photoUrl" placeholder="Photo URL (LinkedIn/Drive/OneDrive link) — optional" />
+      <div class="muted small">If you don’t have a link handy, we can use your LinkedIn headshot or take one on Day 1.</div>
+
+      <div class="divider"></div>
+
+      <h3>SECTION 6: QUICK FIRE <span class="muted">(Optional, Fun | Internal + sometimes public)</span></h3>
+
+      <div class="row">
+        <div>
+          <label>17) Coffee or Energy Drink?</label>
+          <input id="quickCoffee" placeholder="e.g., Coffee, Energy drink, Tea..." />
+        </div>
+        <div>
+          <label>18) Early bird or night owl?</label>
+          <input id="quickTime" placeholder="e.g., Early bird" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>19) Favorite music genre?</label>
+          <input id="quickMusic" placeholder="e.g., country, rock, hip-hop..." />
+        </div>
+        <div>
+          <label>20) One word that describes you best.</label>
+          <input id="quickWord" placeholder="e.g., driven, curious, loyal..." />
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3>SECTION 7: YOUR DREAM BOARD <span class="muted">(Internal – Culture Alignment | Optional Public Excerpt with Approval)</span></h3>
+
+      <div class="muted small">
+        At Orion, we believe careers should support the life you’re building — not compete with it.
+        We want to understand what you’re working toward so we can grow together.
+      </div>
+
+      <label>21) When you imagine your life 3–5 years from now, what is a dream you’re actively working toward?</label>
+      <textarea id="dream" placeholder="Personal or professional. Examples: owning a home, paying off debt, building wealth, traveling, leadership, stability, freedom."></textarea>
+
+      <label>22) Which category best fits this dream?</label>
+      <select id="dreamCategory">
+        <option value="">Select one</option>
+        <option>Financial</option>
+        <option>Family</option>
+        <option>Career</option>
+        <option>Lifestyle</option>
+        <option>Education</option>
+        <option>Health & Wellness</option>
+        <option>Other</option>
+      </select>
+
+      <label>23) What does achieving this dream make possible for you or your family?</label>
+      <textarea id="dreamMeaning" placeholder="Short answer."></textarea>
+
+      <label>24) Is this dream something you’d be comfortable sharing internally as part of Orion’s Dream Board culture?</label>
+      <select id="dreamShare">
+        <option value="Yes" selected>Yes</option>
+        <option value="High-level">Yes, but keep it high-level</option>
+        <option value="No">No, keep this private</option>
+      </select>
+
+      <label>25) (Optional) If this dream had a visual, what would it look like?</label>
+      <input id="dreamVisual" placeholder="e.g., house in the country, mountain view, boat, ranch..." />
+
+      <div class="divider"></div>
+
+      <h3>HOW THIS GETS USED <span class="muted">(Transparency Statement)</span></h3>
+      <div class="small">
+        Your responses will be used to:
+        <ul>
+          <li>Introduce you internally to the Orion team</li>
+          <li>Create a short “Welcome to Orion” bio</li>
+          <li>Optionally create a LinkedIn welcome post</li>
+        </ul>
+        <b>Nothing will be shared publicly without your approval.</b>
+      </div>
+
+      <h3 style="margin-top:12px;">NEXT STEP <span class="muted">(Operational)</span></h3>
+      <div class="small">
+        Once submitted:
+        <ul>
+          <li>HR finalizes your internal bio</li>
+          <li>Marketing formats your welcome announcement</li>
+          <li>You’re officially introduced before Day 1</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3>HOW ORION USES THIS <span class="muted">(Dream Board – Transparency + Trust)</span></h3>
+      <div class="small">
+        Your Dream Board response helps Orion:
+        <ul>
+          <li>Understand what motivates you</li>
+          <li>Align growth opportunities, training, and support</li>
+          <li>Build a culture where people matter beyond metrics</li>
+        </ul>
+        <b>Dreams are never used for performance evaluation</b> — only for alignment, support, and inspiration.
+      </div>
+
+      <div class="btns">
+        <button type="button" onclick="submitSurvey()">Submit Survey (Save to Orion)</button>
+        <button type="button" onclick="copyText('bioOut')">Copy Orion Bio</button>
+        <button type="button" onclick="copyText('liOut')">Copy LinkedIn Post</button>
+        <button type="button" onclick="downloadText('orion_bio.txt', document.getElementById('bioOut').textContent)">Download Bio (.txt)</button>
+        <button type="button" onclick="downloadText('linkedin_post.txt', document.getElementById('liOut').textContent)">Download LinkedIn (.txt)</button>
+        <button type="button" onclick="resetForm()">Reset</button>
+      </div>
+
+      <div class="muted small">Tip: If this will be used by employees, host it privately (password/login) since it contains personal info.</div>
+    </div>
+
+    <!-- RIGHT: OUTPUTS -->
+    <div class="card">
+      <h2>Generated Orion Bio (Internal)</h2>
+      <pre id="bioOut">Start typing on the left to generate the Orion bio.</pre>
+
+      <h2 style="margin-top:14px;">Generated LinkedIn Welcome Post (Public)</h2>
+      <pre id="liOut">Start typing on the left to generate the LinkedIn welcome post.</pre>
+
+      <div class="muted small" style="margin-top:10px;">
+        LinkedIn output respects:
+        <ul>
+          <li>LinkedIn permission (Yes / Review / No)</li>
+          <li>Dream share setting (Yes / High-level / Private)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    /* ============================
+       ✅ PASTE KEYS HERE
+       ============================ */
+    const SUPABASE_URL = "https://veuuopyzmvbiceainbas.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_H2Wk7X2-UBlr7OWOB3wXXA_FE1RPz-c";
+
+    // Create ONE client and store it on window so nothing can overwrite it
+    window.orionDb = window.orionDb || window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+    function val(id) {
+      return (document.getElementById(id)?.value || "").trim();
+    }
+
+    function getHobbies() {
+      const checked = Array.from(document.querySelectorAll("#hobbyList input[type='checkbox']:checked"))
+        .map(x => x.value);
+      const other = val("hobbyOther");
+      if (other) checked.push(other);
+      return checked;
+    }
+
+    function safeLine(s) {
+      return (s || "").replace(/\s+/g, " ").trim();
+    }
+
+    function renderOutputs() {
+      const name = val("fullName");
+      const preferred = val("preferredName");
+      const title = val("jobTitle");
+      const loc = val("location");
+      const background = val("background");
+      const excited = val("excited");
+      const funFact = val("funFact");
+      const hobbies = getHobbies();
+      const dream = val("dream");
+      const dreamShare = val("dreamShare");
+      const linkedInPermission = val("linkedinPermission");
+
+      const displayName = preferred ? `${name} (${preferred})` : name;
+
+      const bio = [
+        `${displayName}${title ? " — " + title : ""}${loc ? " — " + loc : ""}`,
+        "",
+        background ? `Background: ${safeLine(background)}` : "",
+        excited ? `Excited about: ${safeLine(excited)}` : "",
+        hobbies.length ? `Outside of work: ${hobbies.join(", ")}` : "",
+        funFact ? `Fun fact: ${safeLine(funFact)}` : "",
+        dream ? `Dream (3–5 yrs): ${safeLine(dream)}` : ""
+      ].filter(Boolean).join("\n");
+
+      document.getElementById("bioOut").textContent = bio || "Start typing on the left to generate the Orion bio.";
+
+      // LinkedIn respects permissions
+      let li = "Start typing on the left to generate the LinkedIn welcome post.";
+      if (linkedInPermission !== "No" && name) {
+        li = `🎉 Welcome ${name} to Orion Wholesale!\n\n` +
+             `${name}${title ? " joins us as " + title : " joins the team"}${loc ? " based in " + loc : ""}.\n\n` +
+             (background ? `${safeLine(background)}\n\n` : "") +
+             (dream && dreamShare !== "No" ? `At Orion, we support the dreams behind the work. ${name} is working toward: ${safeLine(dream)}\n\n` : "") +
+             `#TeamOrion #OrionWholesale`;
+      }
+      document.getElementById("liOut").textContent = li;
+    }
+
+    // Live output updates
+    document.querySelectorAll("input, textarea, select").forEach(el => {
+      el.addEventListener("input", renderOutputs);
+      el.addEventListener("change", renderOutputs);
+    });
+    renderOutputs();
+
+    // Expose functions globally for inline onclick buttons
+    window.submitSurvey = async function submitSurvey() {
+      try {
+        renderOutputs();
+
+        const payload = {
+          full_name: val("fullName"),
+          preferred_name: val("preferredName"),
+          job_title: val("jobTitle"),
+          start_date: val("startDate"),
+          location: val("location"),
+          linkedin_url: val("linkedinUrl"),
+
+          background: val("background"),
+          excited: val("excited"),
+
+          hobbies: getHobbies(), // store as array if your column is jsonb; otherwise change to .join(", ")
+          fun_fact: val("funFact"),
+          favorite_food: val("favoriteFood"),
+
+          motivation: val("motivation"),
+          success: val("success"),
+          goal: val("goal"),
+
+          linkedin_permission: val("linkedinPermission"),
+          photo_url: val("photoUrl"),
+
+          quick_coffee: val("quickCoffee"),
+          quick_time: val("quickTime"),
+          quick_music: val("quickMusic"),
+          quick_word: val("quickWord"),
+
+          dream: val("dream"),
+          dream_category: val("dreamCategory"),
+          dream_meaning: val("dreamMeaning"),
+          dream_share: val("dreamShare"),
+          dream_visual: val("dreamVisual"),
+
+          generated_bio: document.getElementById("bioOut").textContent,
+          generated_linkedin: document.getElementById("liOut").textContent
+        };
+
+        console.log("Submitting payload:", payload);
+
+        const { data, error } = await window.orionDb
+          .from("onboarding_surveys")
+          .insert(payload)
+          .select("id");
+
+        if (error) throw error;
+
+        alert("✅ Survey submitted successfully!");
+        console.log("Inserted:", data);
+      } catch (err) {
+        console.error("Submit failed:", err);
+        alert("❌ Submission failed: " + (err?.message || "Unknown error"));
+      }
+    };
+
+    window.copyText = async function copyText(outId) {
+      const text = document.getElementById(outId)?.textContent || "";
+      try {
+        await navigator.clipboard.writeText(text);
+        alert("Copied!");
+      } catch (e) {
+        console.error(e);
+        alert("Copy failed. You can select the text and copy manually.");
+      }
+    };
+
+    window.downloadText = function downloadText(filename, text) {
+      const blob = new Blob([text || ""], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    };
+
+    window.resetForm = function resetForm() {
+      document.querySelectorAll("input, textarea").forEach(el => el.value = "");
+      document.querySelectorAll("#hobbyList input[type='checkbox']").forEach(cb => cb.checked = false);
+      document.getElementById("linkedinPermission").value = "Review";
+      document.getElementById("dreamShare").value = "Yes";
+      document.getElementById("dreamCategory").value = "";
+      renderOutputs();
+      alert("Reset!");
+    };
+  </script>
+</body>
+</html>
+
+
